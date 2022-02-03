@@ -1,0 +1,212 @@
+[
+  {
+    "type": "input",
+    "id": "costumerName",
+    "name": "costumerName",
+    "label": "Nombre del cliente*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "phoneNumber",
+    "name": "phoneNumber",
+    "label": "Numero telefonico del cliente*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "imeiFail",
+    "name": "imeiFail",
+    "label": "IMEI del Equipo Dañado*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "email",
+    "name": "email",
+    "label": "Email*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "address",
+    "name": "address",
+    "label": "Direccion*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "id": "province",
+    "name": "province",
+    "placeholder": "Selecciona un estado",
+    "label": "Estado",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "prueba"
+      },
+      {
+        "id": 2,
+        "label": "developer"
+      },
+      {
+        "id": 3,
+        "label": "serviceDesk"
+      },
+      {
+        "id": 4,
+        "label": "designer"
+      },
+      {
+        "id": 5,
+        "label": "it-senior"
+      },
+      {
+        "id": 6,
+        "label": "it-junior"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "suburb",
+    "name": "suburb",
+    "label": "Colonia",
+    "value": ""
+  },
+  {
+    "type": "input",
+    "id": "town",
+    "name": "town",
+    "label": "Municipio",
+    "value": ""
+  },
+  {
+    "type": "input",
+    "id": "postalCode",
+    "name": "postalCode",
+    "label": "Codigo postal*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "invoice",
+    "name": "invoice",
+    "label": "Folio Sertec*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "numberSap",
+    "name": "numberSap",
+    "label": "Numero de Factura Sap*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "id": "imeiNew",
+    "name": "imeiNew",
+    "label": "IMEI nuevo*",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "description": "The field First name is requiered"
+      },
+      {
+        "type": "minLength",
+        "min": 3,
+        "description": "Must be 3 characteres minimum"
+      }
+    ]
+  }
+]
