@@ -8,7 +8,11 @@ interface PropsTextInputs {
   variant?:"outlined"|"filled"| "standard"
 }
 export const TextInputs = (props:PropsTextInputs) => {
-  const {name,label,variant} = props;
+  const {name,label,variant,errors} = props;
+  let isError = false;
+  if(!(Object.keys(errors).length === 0 && errors.constructor === Object)){
+    isError = Boolean(errors[name]);
+  }
   const [field] = useField(props);
   //console.log("this is the value of field ", field);
   return(
@@ -18,6 +22,8 @@ export const TextInputs = (props:PropsTextInputs) => {
       label={label}
       id={name}
       margin="normal"
+      error={isError}
+      helperText={isError ? errors[name]: ""}
       {...field}
     />
   )

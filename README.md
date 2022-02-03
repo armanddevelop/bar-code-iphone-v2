@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is made using materialUI and Fomik build a dynamic form with these two npm packages
 
 ## Available Scripts
 
