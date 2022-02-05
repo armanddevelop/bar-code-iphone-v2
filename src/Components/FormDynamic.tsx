@@ -4,33 +4,13 @@ import { TextInputs,SelectOptions  } from './';
 import {Box,Button} from '@mui/material';
 import dataInputs from '../data/data-inputs.json';
 import { Dispatch, SetStateAction } from 'react';
+import { buildFields } from '../utils/BuildObj';
 interface DataUser{
-  costumerName:string,
-  phoneNumber:string,
-  imeiFail:string,
-  email:string,
-  address:string,
-  province?:string,
-  suburb?:string,
-  town?:string,
-  postalCode:string,
-  invoice:string,
-  numberSap:string,
-  imeiNew:string,
+  [key:string]: any
 }
-const FormFields={
-  costumerName:"",
-  phoneNumber:"",
-  imeiFail:"",
-  email:"",
-  address:"",
-  province:"",
-  suburb:"",
-  town:"",
-  postalCode:"",
-  invoice:"",
-  numberSap:"",
-  imeiNew:"",
+interface FormDynamicProps{
+  setUserData: Dispatch<SetStateAction<DataUser>>
+  setRederCodeBar: Dispatch<SetStateAction<boolean>>
 }
 
 const validationSchema = Yup.object({
@@ -51,13 +31,8 @@ const validationSchema = Yup.object({
           .required("El nuevo IMEI es requerido")
 });
 
-interface FormDynamicProps{
-  setUserData: Dispatch<SetStateAction<DataUser>>
-  setRederCodeBar: Dispatch<SetStateAction<boolean>>
-}
-
 export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
-  const title = 'Codigo de Barras de Iphone';
+  const title = 'Codigo de Barras de Iphone V2';
   return (
     <Box
       sx={{
@@ -67,7 +42,7 @@ export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
       >
         <h1>{title}</h1>
         <Formik
-          initialValues={FormFields}
+          initialValues={buildFields()}
           onSubmit={(values)=>{
             console.log("Estos son los valores del formulario ", values);
             setUserData(values);

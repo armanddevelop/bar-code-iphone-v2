@@ -11,7 +11,10 @@ function FormIphoneV2() {
                               setUserData = {setUserData}
                               setRederCodeBar={setRenderCodeBar}
                           /> :
-                          <BarCodeData userData={userData}/>
+                          <BarCodeData
+                            userData={userData}
+                            setRederCodeBar={setRenderCodeBar}
+                          />
         }
     </Container>
   );

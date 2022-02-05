@@ -1,12 +1,16 @@
+import { Button } from "@mui/material";
 import { BarCode } from ".";
 
 
-export const BarCodeData = ({userData}:any) => {
+export const BarCodeData = ({userData,setRederCodeBar}:any) => {
   const options={
     background: '#ccffff',
     marginRight: 20
   }
   const userInfo = Object.values(userData);
+  const setRenderBarCode =()=>{
+    setRederCodeBar(false);
+  }
   return (
     <>
       {
@@ -14,6 +18,7 @@ export const BarCodeData = ({userData}:any) => {
           return <BarCode value={info} options={options} key={idx}/>
         })
       }
+      <Button sx={{mt:2}} onClick={setRenderBarCode} color="primary" variant="contained" fullWidth  size="medium">Regresar</Button>
     </>
   );
 };
