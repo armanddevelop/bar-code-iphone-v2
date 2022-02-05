@@ -1,7 +1,7 @@
 import {Formik,Form} from 'formik';
 import * as Yup from 'yup';
 import { TextInputs,SelectOptions  } from './';
-import {Box, Container, Button} from '@mui/material';
+import {Box,Button} from '@mui/material';
 import dataInputs from '../data/data-inputs.json';
 import { Dispatch, SetStateAction } from 'react';
 interface DataUser{
@@ -42,7 +42,13 @@ const validationSchema = Yup.object({
   postalCode: Yup.string().min(5, "El codigo postal debe de ser de 5 digitos").required("El coidgo postal es requerido"),
   invoice: Yup.string().required("Folio Sertec es requerido"),
   numberSap:Yup.string().min(5,"El Folio SAP debe de ser de 5 digitos").max(5,"El Folio SAP debe de ser de 5 digitos").required("El Folio SAP es requerido"),
-  imeiNew: Yup.string().min(15,"El IMEI debe de ser de 15 digitos").max(15,"El IMEI debe de ser de 15 digitos").required("El nuevo IMEI es requerido")
+  imeiNew: Yup.string().min(15,"El IMEI debe de ser de 15 digitos")
+          .max(15,"El IMEI debe de ser de 15 digitos")
+          .test("validImei","El nuevo IMEI no puede ser igual al IMEI de falla",function(value){
+            const{imeiFail}= this.parent;
+            return !(imeiFail === value);
+          })
+          .required("El nuevo IMEI es requerido")
 });
 
 interface FormDynamicProps{
@@ -53,8 +59,7 @@ interface FormDynamicProps{
 export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
   const title = 'Codigo de Barras de Iphone';
   return (
-    <Container maxWidth='sm'>
-      <Box
+    <Box
       sx={{
         width: 500,
         maxWidth: '100%'
@@ -100,6 +105,5 @@ export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
           }
         </Formik>
       </Box>
-    </Container>
   );
 };

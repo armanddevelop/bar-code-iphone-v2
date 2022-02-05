@@ -6,15 +6,13 @@ interface BarCodeProps{
 interface OptionsBarCode{
   background:string,
   displayValue?:boolean,
-  textAlign?:string
+  textAlign?:string,
+  marginRight?:number
 }
 export const BarCode =({value,options}:BarCodeProps)=>{
-  const{background }= options;
   const { inputRef } = useBarcode({
     value: value === "" ? "NoData" : value ,
-    options: {
-      background,
-    }
+    options: {...options}
   });
   return <img ref={inputRef} alt="prueba"/>;
 }
