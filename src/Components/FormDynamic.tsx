@@ -15,7 +15,9 @@ interface FormDynamicProps{
 
 const validationSchema = Yup.object({
   costumerName: Yup.string().required("El nombre del cliente es requerido"),
-  phoneNumber: Yup.string().min(10,"El numero telefonico debe ser de 10 digitos").required("El telefono es requerido"),
+  phoneNumber: Yup.string().min(10,"El numero telefonico debe ser de 10 digitos")
+              .max(10,"El numero telefonico es de maximo 10 digitos")
+              .required("El telefono es requerido"),
   imeiFail: Yup.string().min(15,"El IMEI debe de ser de 15 digitos").max(15,"El IMEI debe de ser de 15 digitos").required("El IMEI es requerido"),
   email: Yup.string().email("El email debe de ser valido").required("el email es requerido"),
   address: Yup.string().required("La direccion es requerida"),
@@ -53,13 +55,14 @@ export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
           {
             ({handleReset,errors})=>(
               <Form noValidate>
-                {dataInputs.map(({name,label,type,options,placeholder,validations})=>{
+                {dataInputs.map(({name,label,type,options,placeholder,validations, isText})=>{
                   if (type === "input") {
                     return <TextInputs
                               key={name}
                               name={name}
                               label={label}
                               variant="outlined"
+                              isText = {isText}
                               errors={validations ? errors : {}}
                           />
                   }
@@ -74,7 +77,7 @@ export const FormDynamic = ({setUserData,setRederCodeBar}:FormDynamicProps) => {
                   return <></>
                 })}
                 <Button color="primary" variant="contained" fullWidth type="submit" size="medium">Enviar</Button>
-                <Button sx={{mt:2}} onClick={handleReset} color="primary" variant="contained" fullWidth  size="medium">Borrar formulario</Button>
+                <Button sx={{mt:2}} onClick={handleReset} color="primary" variant="contained" fullWidth  size="medium">Limpiar Formulario</Button>
               </Form>
             )
           }

@@ -1,6 +1,7 @@
 [
   {
     "type": "input",
+    "isText": true,
     "id": "costumerName",
     "name": "costumerName",
     "label": "Nombre del cliente*",
@@ -19,6 +20,7 @@
   },
   {
     "type": "input",
+    "isText": false,
     "id": "phoneNumber",
     "name": "phoneNumber",
     "label": "Numero telefonico del cliente*",
@@ -37,6 +39,7 @@
   },
   {
     "type": "input",
+    "isText": false,
     "id": "imeiFail",
     "name": "imeiFail",
     "label": "IMEI del Equipo Dañado*",
@@ -55,6 +58,7 @@
   },
   {
     "type": "input",
+    "isText": true,
     "id": "email",
     "name": "email",
     "label": "Email*",
@@ -73,6 +77,7 @@
   },
   {
     "type": "input",
+    "isText": true,
     "id": "address",
     "name": "address",
     "label": "Direccion*",
@@ -91,40 +96,50 @@
   },
   {
     "type": "select",
+    "isText": true,
     "id": "province",
     "name": "province",
-    "placeholder": "Selecciona un estado",
+    "placeholder": "Selecciona un estado de la republica",
     "label": "Estado",
     "value": "",
     "options": [
-      {
-        "id": "Aguas Calientes",
-        "label": "Aguas Calientes"
-      },
-      {
-        "id": 2,
-        "label": "developer"
-      },
-      {
-        "id": 3,
-        "label": "serviceDesk"
-      },
-      {
-        "id": 4,
-        "label": "designer"
-      },
-      {
-        "id": 5,
-        "label": "it-senior"
-      },
-      {
-        "id": 6,
-        "label": "it-junior"
-      }
+      { "id": "AGS", "label": "AGUASCALIENTES" },
+      { "id": "BC", "label": "BAJA CALIFORNIA" },
+      { "id": "BCS", "label": "BAJA CALIFORNIA SUR" },
+      { "id": "CHI", "label": "CHIHUAHUA" },
+      { "id": "CHS", "label": "CHIAPAS" },
+      { "id": "CMP", "label": "CAMPECHE" },
+      { "id": "CMX", "label": "CIUDAD DE MEXICO" },
+      { "id": "COA", "label": "COAHUILA" },
+      { "id": "COL", "label": "COLIMA" },
+      { "id": "DGO", "label": "DURANGO" },
+      { "id": "GRO", "label": "GUERRERO" },
+      { "id": "GTO", "label": "GUANAJUATO" },
+      { "id": "HGO", "label": "HIDALGO" },
+      { "id": "JAL", "label": "JALISCO" },
+      { "id": "MCH", "label": "MICHOACAN" },
+      { "id": "MEX", "label": "ESTADO DE MEXICO" },
+      { "id": "MOR", "label": "MORELOS" },
+      { "id": "NAY", "label": "NAYARIT" },
+      { "id": "NL", "label": "NUEVO LEON" },
+      { "id": "OAX", "label": "OAXACA" },
+      { "id": "PUE", "label": "PUEBLA" },
+      { "id": "QR", "label": "QUINTANA ROO" },
+      { "id": "QRO", "label": "QUERETARO" },
+      { "id": "SIN", "label": "SINALOA" },
+      { "id": "SLP", "label": "SAN LUIS POTOSI" },
+      { "id": "SON", "label": "SONORA" },
+      { "id": "TAB", "label": "TABASCO" },
+      { "id": "TLX", "label": "TLAXCALA" },
+      { "id": "TMS", "label": "TAMAULIPAS" },
+      { "id": "VER", "label": "VERACRUZ" },
+      { "id": "YUC", "label": "YUCATAN" },
+      { "id": "ZAC", "label": "ZACATECAS" }
     ]
   },
   {
     "type": "input",
+    "isText": true,
     "id": "suburb",
     "name": "suburb",
     "label": "Colonia",
@@ -132,6 +147,7 @@
   },
   {
     "type": "input",
+    "isText": true,
     "id": "town",
     "name": "town",
     "label": "Municipio",
@@ -139,6 +155,7 @@
   },
   {
     "type": "input",
+    "isText": false,
     "id": "postalCode",
     "name": "postalCode",
     "label": "Codigo postal*",
@@ -157,6 +174,7 @@
   },
   {
     "type": "input",
+    "isText": true,
     "id": "invoice",
     "name": "invoice",
     "label": "Folio Sertec*",
@@ -175,6 +193,7 @@
   },
   {
     "type": "input",
+    "isText": false,
     "id": "numberSap",
     "name": "numberSap",
     "label": "Numero de Factura Sap*",
@@ -193,6 +212,7 @@
   },
   {
     "type": "input",
+    "isText": false,
     "id": "imeiNew",
     "name": "imeiNew",
     "label": "IMEI nuevo*",

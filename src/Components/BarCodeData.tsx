@@ -13,6 +13,7 @@ export const BarCodeData = ({userData,setRederCodeBar}:any) => {
   }
   return (
     <>
+    <h1>Esto son los datos del cliente {userData.costumerName}</h1>
       {
         userInfo.map((info:any, idx:number)=>{
           return <BarCode value={info} options={options} key={idx}/>

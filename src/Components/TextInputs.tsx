@@ -8,7 +8,7 @@ interface PropsTextInputs {
   variant?:"outlined"|"filled"| "standard"
 }
 export const TextInputs = (props:PropsTextInputs) => {
-  const {name,label,variant,errors} = props;
+  const {name,label,variant,errors,isText} = props;
   let isError = false;
   if(!(Object.keys(errors).length === 0 && errors.constructor === Object)){
     isError = Boolean(errors[name]);
@@ -24,6 +24,8 @@ export const TextInputs = (props:PropsTextInputs) => {
       margin="normal"
       error={isError}
       helperText={isError ? errors[name]: ""}
+      type={!isText ? "number": "text"}
+      inputProps={!isText ? { inputMode: 'numeric', pattern: '[0-9]*' } : {}}
       {...field}
     />
   )
